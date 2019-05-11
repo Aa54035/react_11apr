@@ -3,7 +3,7 @@ node {
     stage('Checkout') {
       checkout scm
     }
-    stage('Environment') {
+    stage('check version') {
       sh 'git --version'
       echo "Branch: ${env.BRANCH_NAME}"
       sh 'docker -v'
@@ -15,9 +15,10 @@ node {
     stage('Docker test'){
       //sh 'docker run -it -p 80:80 -d react-test3'
       sh 'docker images'
+      sh 'docker ps -a'
     }
       stage('Docker run'){
-      sh 'docker ps -a'
+   
       sh 'export DOCKER_HOST=tcp://http://52.79.240.247'
       sh 'docker run -t -p 3000:3000 react-test4'
     }
