@@ -1,3 +1,8 @@
+1>I have installed Docker plugin in Visual studio 
+2>USing this after press "F1"   -> Docker add docker file - > node js  -> All required files will be created auto into reactjs code 
+3>we need to create Jenkinsfile into root dir of React js code , where Dockerfile kept 
+4> Jenkins file specify the stages for project like ....scm checkout ...compile ...run
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
